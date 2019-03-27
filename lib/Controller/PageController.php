@@ -183,7 +183,7 @@ class PageController extends Controller {
 			'token' => $token,
 			'signaling-settings' => $this->config->getSettings($this->userId),
 		];
-		$response = new TemplateResponse($this->appName, 'index', $params);
+		$response = new TemplateResponse($this->appName, 'vue', $params);
 		$csp = new ContentSecurityPolicy();
 		$csp->addAllowedConnectDomain('*');
 		$csp->addAllowedMediaDomain('blob:');
